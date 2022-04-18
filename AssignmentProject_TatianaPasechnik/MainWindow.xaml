@@ -38,7 +38,7 @@
                     <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                    <Setter Property="Background" TargetName="border" Value="#c66b3d"/>
                     <Setter Property="BorderBrush" TargetName="border" Value="#c66b3d"/>
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
@@ -63,13 +63,25 @@
 
         <TextBox  Template="{StaticResource TextBoxBaseControlTemplate}" Text="username"
             
-            HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="5" Width="316" Height="43" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16"/>
+            HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="5" Width="316" Height="43" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
 
         <TextBox  Template="{StaticResource TextBoxBaseControlTemplate}" Text="password"
             
-            HorizontalAlignment="Center" Margin="0,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="5" Width="316" Height="43" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16"/>
+            HorizontalAlignment="Center" Margin="0,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="5" Width="316" Height="43" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Button Template="{StaticResource RoundedButtonTemplate}"
-            Content="Login" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Height="50" Width="200" Background="#FF26495C" Foreground="White" />
+            Content="Login" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Height="50" Width="200" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
         <Label Content=" Truck Rental Management system" HorizontalAlignment="Left" Margin="235,49,0,0" VerticalAlignment="Top" Width="355" Foreground="#FF26495C" FontFamily="Franklin Gothic Demi Cond" FontSize="20"/>
 
     </Grid>
