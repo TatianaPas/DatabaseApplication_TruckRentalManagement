@@ -6,8 +6,109 @@
         xmlns:local="clr-namespace:AssignmentProject_TatianaPasechnik.View"
         mc:Ignorable="d"
         Title="UserDashboard" Height="450" Width="800">
-    <Grid>
-        <Label Content="User dashboard" HorizontalAlignment="Left" Margin="145,44,0,0" VerticalAlignment="Top" Width="430"/>
+    <Window.Resources>
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="#c66b3d"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="RoundedButtonTemplate" TargetType="{x:Type Button}">
+            <Border x:Name="border" 
+                    CornerRadius="5" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsDefaulted" Value="True">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#c66b3d"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#c66b3d"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
 
+    </Window.Resources>
+    <Grid Background="#FFC66B3D">
+        <Grid Margin="30,23,595,20">
+            <Button x:Name="searchClientBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Search Client" Background="#FFC4A35A" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,164,0,172" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="addClient"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Add a New Client" Background="#FFC4A35A" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,219,0,117" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="updateClientBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Update Client Details" Background="#FFC4A35A" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,274,0,62" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="showAvailableTrucksBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Available Trucks" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,0,0,341" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="rentTruckBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Rent Truck" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,50,0,290" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="returnTruckBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Return Truck" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="16" Margin="0,101,0,240" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="rentalRecordBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Rental Records" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top" Height="50" Width="175" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Franklin Gothic Demi Cond" FontSize="16" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

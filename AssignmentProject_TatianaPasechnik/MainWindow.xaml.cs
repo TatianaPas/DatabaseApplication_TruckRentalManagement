@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AssignmentProject_TatianaPasechnik.View;
 
 namespace AssignmentProject_TatianaPasechnik
 {
@@ -23,6 +24,24 @@ namespace AssignmentProject_TatianaPasechnik
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (usernameTextBox.Text == "admin")
+            {
+                adminDashboardNew form = new adminDashboardNew();
+                form.Show();
+                this.Hide();
+            }else if(usernameTextBox.Text =="user")
+            {
+                userDashboardNew form = new userDashboardNew();
+                form.Show();
+                this.Hide();
+            }
+            
+            
         }
     }
 }
