@@ -58,67 +58,108 @@
         </ControlTemplate>
 
     </Window.Resources>
-    <Grid Background="#FFC4A35A">
-        <Button x:Name="eaddEmployeeBtn"
-            Template="{StaticResource RoundedButtonTemplate}"
-            Content="Add New Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="235" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Margin="245,364,0,0" >
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="232" FontSize="16" Height="26"/>
-        <TextBox  x:Name="nameTextField"
-            Template="{StaticResource TextBoxBaseControlTemplate}"
+    <Grid Background="#FFC4A35A" Margin="0,0,-215,-236">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Orientation="Vertical" VerticalAlignment="Center">
+            <Label Content="Name" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="294" FontSize="16" Height="36"/>
+            <TextBox  x:Name="nameTextField"
+                Template="{StaticResource TextBoxBaseControlTemplate}" TextWrapping="Wrap" Padding="10" Width="292" Height="38" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Address" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="294" FontSize="16" Height="39"/>
+            <TextBox  x:Name="addressTextField"
+                Template="{StaticResource TextBoxBaseControlTemplate}" TextWrapping="Wrap" Padding="10" Width="292" Height="42" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Telephone" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="294" FontSize="16" Height="40"/>
+            <TextBox  x:Name="phoneTextField"
+                Template="{StaticResource TextBoxBaseControlTemplate}" TextWrapping="Wrap" Padding="10" Width="292" Height="39" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="License Number" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="295" FontSize="16" Height="36"/>
+            <TextBox  x:Name="licenseNumberTextField"
+                Template="{StaticResource TextBoxBaseControlTemplate}" TextWrapping="Wrap" Padding="10" Width="292" Height="46" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Age" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="296" FontSize="16" Height="45"/>
+            <TextBox  x:Name="ageTextField"
+                Template="{StaticResource TextBoxBaseControlTemplate}" TextWrapping="Wrap" Padding="10" Width="292" Height="45" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="License Expiry Date" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="296" FontSize="16" Height="36"/>
+            <DatePicker Height="43" Width="292" FontFamily="Franklin Gothic Demi Cond" FontSize="16">
+                <DatePicker.Effect>
+                    <DropShadowEffect/>
+                </DatePicker.Effect>
+            </DatePicker>
+            <Button x:Name="addCustomerBtn"
+                Template="{StaticResource RoundedButtonTemplate}"
+                Content="Add New Customer" Height="57" Width="292" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+        <Border Grid.Column="1" HorizontalAlignment="Left" Height="636" Margin="357,0,0,0" VerticalAlignment="Center" Width="595">
+            <Grid>
+                <TextBox  x:Name="searchIdTextField"
+                    Template="{StaticResource TextBoxBaseControlTemplate}"
             
-            HorizontalAlignment="Left" Margin="30,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="232" Height="37" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
-            <TextBox.Effect>
-                <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="30,121,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="232" FontSize="16" Height="27"/>
-        <Label Content="Telephone" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="232" FontSize="16" Height="44"/>
-        <Label Content="Age" HorizontalAlignment="Left" Margin="413,122,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="233" FontSize="16" Height="32"/>
-        <Label Content="License Number" HorizontalAlignment="Left" Margin="413,50,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="232" FontSize="16" Height="26"/>
-        <Label Content="Personal Details:" HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="White" Width="232" FontSize="16" Height="26"/>
-        <Label Content="License Details:" HorizontalAlignment="Left" Margin="413,19,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="White" Width="227" FontSize="16" Height="26"/>
-        <Label Content="License Expiry Date" HorizontalAlignment="Left" Margin="413,200,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="233" FontSize="16" Height="26"/>
-        <TextBox  x:Name="addressTextField"
-            Template="{StaticResource TextBoxBaseControlTemplate}"
+                    HorizontalAlignment="Left" Margin="55,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="239" Height="38" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                    <TextBox.Effect>
+                        <DropShadowEffect/>
+                    </TextBox.Effect>
+                </TextBox>
+                <Button x:Name="searchByIdBtn"
+                    Template="{StaticResource RoundedButtonTemplate}"
+                    Content="Search Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="42" Width="240" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Margin="333,43,0,0" >
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+                <Label Content="Search by ID" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="242" FontSize="16" Height="36"/>
+                <TextBox  x:Name="searchByNameTextField"
+                    Template="{StaticResource TextBoxBaseControlTemplate}"
             
-            HorizontalAlignment="Left" Margin="30,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="232" Height="37" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
-            <TextBox.Effect>
-                <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
-        <TextBox  x:Name="phoneTextField"
-            Template="{StaticResource TextBoxBaseControlTemplate}"
-            
-            HorizontalAlignment="Left" Margin="30,219,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="232" Height="37" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
-            <TextBox.Effect>
-                <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
-        <TextBox  x:Name="officeAddressTextfield"
-            Template="{StaticResource TextBoxBaseControlTemplate}"
-            
-            HorizontalAlignment="Left" Margin="413,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="232" Height="37" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
-            <TextBox.Effect>
-                <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
-        <TextBox  x:Name="phoneExtensionTextField"
-            Template="{StaticResource TextBoxBaseControlTemplate}"
-            
-            HorizontalAlignment="Left" Margin="413,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="232" Height="37" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
-            <TextBox.Effect>
-                <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
-        <DatePicker HorizontalAlignment="Left" Margin="415,239,0,0" VerticalAlignment="Top" Height="65" Width="240" FontFamily="Franklin Gothic Demi Cond" FontSize="16">
-            <DatePicker.Effect>
-                <DropShadowEffect/>
-            </DatePicker.Effect>
-        </DatePicker>
+                    HorizontalAlignment="Left" Margin="56,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Padding="10" Width="239" Height="38" Background="#FFE5E5DC" Foreground="#FF26495C" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="16" >
+                    <TextBox.Effect>
+                        <DropShadowEffect/>
+                    </TextBox.Effect>
+                </TextBox>
+                <Button x:Name="searchByNameBtn"
+                    Template="{StaticResource RoundedButtonTemplate}"
+                    Content="Search Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="42" Width="240" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Margin="335,121,0,0" >
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+                <Label Content="Search by Name" HorizontalAlignment="Left" Margin="58,80,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="242" FontSize="16" Height="36"/>
+                <DataGrid x:Name="Grid" Margin="0,211,0,165"/>
+                <Button x:Name="updateCustomerBtn"
+                    Template="{StaticResource RoundedButtonTemplate}"
+                    Content="Update Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="55" Width="285" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Margin="310,581,0,0" >
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+
+
+            </Grid>
+        </Border>
+
 
     </Grid>
 </Window>

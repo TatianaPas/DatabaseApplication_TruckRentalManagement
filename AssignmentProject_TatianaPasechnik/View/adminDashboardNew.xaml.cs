@@ -32,5 +32,12 @@ namespace AssignmentProject_TatianaPasechnik.View
             form.Show();
             this.Hide();
         }
+
+        private void customerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            addCustomer form= new addCustomer();
+            form.Show();
+            this.Hide();
+        }
     }
 }

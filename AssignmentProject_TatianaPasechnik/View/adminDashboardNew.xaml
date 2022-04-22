@@ -69,7 +69,7 @@
             </Button>
             <Button x:Name="customerBtn"
                 Template="{StaticResource RoundedButtonTemplate}"
-                Content="Customer Management" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Height="50" Width="415" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" >
+                Content="Customer Management" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Height="50" Width="415" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Click="customerBtn_Click" >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
