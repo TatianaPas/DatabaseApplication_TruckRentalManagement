@@ -83,7 +83,7 @@
             </Button>
             <Button x:Name="rentalBtn"
                 Template="{StaticResource RoundedButtonTemplate}"
-                Content="Rental Records" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Height="50" Width="415" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" >
+                Content="Rental Records" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Height="50" Width="415" Background="#FF26495C" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="18" Click="rentalBtn_Click" >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>

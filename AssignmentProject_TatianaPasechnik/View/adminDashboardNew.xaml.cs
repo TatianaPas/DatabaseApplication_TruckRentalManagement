@@ -39,5 +39,12 @@ namespace AssignmentProject_TatianaPasechnik.View
             form.Show();
             this.Hide();
         }
+
+        private void rentalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            responsivness_trial form = new responsivness_trial();
+            this.Hide();
+            form.Show();
+        }
     }
 }

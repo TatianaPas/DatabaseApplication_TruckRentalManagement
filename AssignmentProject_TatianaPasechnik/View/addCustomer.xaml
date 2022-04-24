@@ -58,10 +58,11 @@
         </ControlTemplate>
 
     </Window.Resources>
+    
     <Grid Background="#FFC4A35A" Margin="0,0,-215,-236">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Orientation="Vertical" VerticalAlignment="Center">
             <Label Content="Name" FontFamily="Franklin Gothic Demi Cond" Foreground="#FF26495C" Width="294" FontSize="16" Height="36"/>
@@ -113,7 +114,7 @@
                 </Button.Effect>
             </Button>
         </StackPanel>
-        <Border Grid.Column="1" HorizontalAlignment="Left" Height="636" Margin="357,0,0,0" VerticalAlignment="Center" Width="595">
+        <Border Grid.Column="2" HorizontalAlignment="Left" Height="636" Margin="357,0,0,0" VerticalAlignment="Center" Width="595">
             <Grid>
                 <TextBox  x:Name="searchIdTextField"
                     Template="{StaticResource TextBoxBaseControlTemplate}"
